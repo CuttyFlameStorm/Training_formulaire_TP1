@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <link rel="stylesheet" href="header.css">
-        <link rel="stylesheet" href="formulaire.css">  
+        <link rel="stylesheet" href="formulaire2.css">  
 
     </head>
     <body>
@@ -23,7 +23,140 @@
         <main>
             <section class="sectionForm">
                 <!--Formulaire à insérer ici-->
-            </section>
+
+                 
+            
+            <!-- [FORMULAIRE DE NIVEAU 3  ]------------------------------ -->
+            
+            <form>
+                <fieldset class="form-field">
+                  <legend class="legendary">Formulaire</legend>
+                  
+                  <div>
+                    <label for="nom">Nom:</label>
+                    <span id="erreurNom" class="error">info 💬: "caractères alphabetique uniquement".</span>
+                    <input placeholder="- à compléter..🖊️ -" type="text" id="nom" name="nom" pattern="[A-Za-z]+" required>
+                    
+                  </div>
+                  
+                  <div>
+                    <label for="prenom">Prénom:</label>
+                    <span id="erreurPrenom" class="error">info 💬: "caractères alphanumériques uniquement".</span>
+                    <input placeholder="- à compléter.. -" type="text" id="prenom" name="prenom" pattern="[A-Za-z]+" required>
+                    
+                  </div>
+                  
+                  <div>
+                    <label for="dateNaissance">Date de naissance:</label>
+                    <span id="erreurDate" class="error">info 💬: "caractères ou date de naissance incorrect".</span>
+                    <input type="date" id="dateNaissance" name="dateNaissance" min="1900-01-01" max="2023-07-03" required>
+                    
+                  </div>
+                  
+                  <div>
+                    <label for="login">Login:</label>
+                    <span class="error"></span>
+                    <input placeholder="- à compléter.. -" type="text" id="login" name="login" pattern="[A-Za-z0-9]{3,}" required>
+                    
+                  </div>
+                  
+                  <div>
+                    <label for="motDePasse">Mot de passe:</label>
+                    <input placeholder="- à saisir.. -" type="password" id="motDePasse" name="motDePasse" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$" required>
+                    
+                  </div>
+                  
+                  <div>
+                    <label for="repeteMotDePasse">Répéter le mot de passe:</label>
+                    <span id="erreurPasse" class="error">info 💬: "les 2 champs MOTS DE PASSE doivent être identique".</span>
+                    <input placeholder="- à vérifier.. -" type="password" id="repeteMotDePasse" name="repeteMotDePasse" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$" required>
+                    
+                  </div>
+                  
+                  <div>
+                    <label for="langagePrefere">Langage informatique préféré:</label>
+                    <span id="erreurLangage" class="error">info 💬: "choisir un langage dans la  liste deroulante".</span>
+                    <input placeholder="- à choisir dans la liste..📝 -" type="text" list="langages" id="langagePrefere" name="langagePrefere" required>
+                    <datalist id="langages">
+                      <option value="C#">
+                      <option value="Java">
+                      <option value="Python">
+                      <option value="PHP">
+                      <option value="Fortran">
+                      <option value="C">
+                      <option value="C++">
+                      <option value="Ruby">
+                      <option value="Perl">
+                      <option value="Cobol">
+                      <option value="Dart">
+                      <option value="Swift">
+                      <option value="Objective-C">
+                      <option value="Kotlin">
+                      <option value="Go">
+                      <option value="Rust">
+                      <option value="JavaScript">
+                    </datalist>
+                    
+                    </div>
+                    <div>
+                    <span>Statut:</span>
+                  
+                    <div>
+                        <input type="radio" id="etudiant" name="statut" value="etudiant" required>
+                        <label for="etudiant">Étudiant</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="formateur" name="statut" value="formateur" required>
+                        <label for="formateur">Formateur</label>
+                    </div>
+                    </div>
+                    
+                    <div>
+                    <button class="btnAnnuler" type="reset">Annuler</button>
+                    <a href="formulaire.html">Retourner à l'accueil</a>
+                    <button type="submit">Valider</button>
+                    </div>
+                </fieldset>
+            </form>
+              
+            
+            
+            
+                </section>
+
+                <section>
+                  <hr style="margin-top: 30px;">
+                  <h1> TP 01 - JAVASCRIPT </h1>
+                  <hr>
+                  <p style="text-align: center;">A l'aide de la méthode Math.random, écrivez un programme qui s'arrête lorsque tous les nombres de la plage [0;100[ sont tirés au sort.
+                    Indiquer le nombre de tirage nécessaire.
+                    </p>
+                  <h2>Resultat QUESTION1 : <br><span id="resultatQuestion1" style="font-family: consolas; background-color: black; border: 1px solid wheat; padding: 3px; border-radius: 5px; box-shadow: 2px 2px 5px darkcyan;">
+                     voici</span></h2>
+
+                     <hr style="margin-top: 30px;">
+                    <p style="text-align: center;">
+                      Trier les lettres d’une phrase par ordre alphabétique. La phrase utilisée dans la solution est la suivante : 
+                      <span style="color: green;">"une chaine avec des lettres dans un certain ordre pour donner du sens"</span>
+                    </p>
+                  <h2>Resultat QUESTION2 : <br><span id="resultatQuestion2" style="font-family: consolas; background-color: black; border: 1px solid wheat; padding: 3px; border-radius: 5px; box-shadow: 2px 2px 5px darkcyan;">
+                  voici</span></h2>
+
+                  <hr style="margin-top: 30px;">
+                    <p style="text-align: center;">
+                      <span style="color: green;">"une phrase sans majuscule"</span>
+                    </p>
+                  <h2>Resultat QUESTION3 : <br><span id="resultatQuestion3" style="font-family: consolas; background-color: black; border: 1px solid wheat; padding: 3px; border-radius: 5px; box-shadow: 2px 2px 5px darkcyan;">
+                  voici</span></h2>
+
+                  <hr>
+
+
+                </section>
         </main>
-    </body>
+
+
+        <script src="formulaire2.js"></script>
+        <script src="TP1-Javascript.js"></script>
+      </body>
 </html>
